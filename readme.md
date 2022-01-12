@@ -1,4 +1,4 @@
-# RANDOMFS - a webdav virtual filesytem demonatration
+# RANDOMFS - a webdav virtual filesytem demonstration
 
 Random FS serves a webdav server that hosts a single
 file, `random.txt`, which - when opened - returns
@@ -14,6 +14,10 @@ filesystem then looks like:
 ```
 
 and `cat`ing random.txt will give you a random number.
+
+## To run
+
+`python webdav_random_fs.py`
 
 ## Why
 
