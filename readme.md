@@ -1,9 +1,9 @@
-# RandomFS - a webdav virtual filesytem demo
+# HeisencatFS - a webdav virtual filesytem demo
 
-RandomFS serves a webdav server that hosts a single
-file, `random.txt`, which - when opened - contains
-a random number between 0 and 10. The number changes
-each time you open it.
+HeisencatFS serves a webdav server that hosts a single
+file, `the_cat_box.txt`, which - when opened - randomly
+tell you either "the cat is alive" or "the cat is dead."
+The state of the cat changes each time you open it.
 
 The site is hosted at localhost:8086, and can be
 mounted as a filesystem on windows and linux. When
@@ -11,14 +11,14 @@ mounted, the filesystem looks like:
 
 ```
 /
-.----random.txt
+.----the_cat_box.txt
 ```
 
-and `cat`ing random.txt will give you a random number.
+and `cat`ing the_cat_box.txt will give you a state.
 
 ## To run
 
-`python randomFS.py`
+`python heisencatFS.py`
 
 ## Why
 

@@ -3,13 +3,13 @@ import logging
 import sys
 
 import wsgidav.wsgidav_app
-from random_fs.random_fs_provider import RandomFSProvider
+from heisenburg_fs.heisenburg_fs_provider import HeisenburgFSProvider
 from cheroot.wsgi import Server as WSGIServer
 from cheroot.wsgi import PathInfoDispatcher as WSGIPathInfoDispatcher
 
 if __name__ == '__main__':
 
-    randomFS = RandomFSProvider()
+    heisenburgFS = HeisenburgFSProvider()
 
     config = {
         "host": "0.0.0.0",
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         },
         "port": 8086,
         "provider_mapping": {
-            "/": randomFS
+            "/": heisenburgFS
         },
         "verbose": 5,
         "logging": {
