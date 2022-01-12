@@ -18,7 +18,7 @@ and `cat`ing random.txt will give you a random number.
 
 ## To run
 
-`python webdav_random_fs.py`
+`python randomFS.py`
 
 ## Why
 
