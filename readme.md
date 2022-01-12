@@ -1,12 +1,13 @@
-# RANDOMFS - a webdav virtual filesytem demonstration
+# RandomFS - a webdav virtual filesytem demonstration
 
-Random FS serves a webdav server that hosts a single
-file, `random.txt`, which - when opened - returns
-a file with a random number between 0 and 10.
+RandomFS serves a webdav server that hosts a single
+file, `random.txt`, which - when opened - contains
+a random number between 0 and 10. The number changes
+each time you open it.
 
 The site is hosted at localhost:8086, and can be
-mounted as a filesystem on windows and linux. The
-filesystem then looks like:
+mounted as a filesystem on windows and linux. When
+mounted, the filesystem looks like:
 
 ```
 /
