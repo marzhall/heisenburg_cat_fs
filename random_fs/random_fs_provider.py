@@ -1,6 +1,6 @@
 from wsgidav import dav_provider
-from random_fs.virtual_random_file import virtual_random_file_provider
-from random_fs.virtual_random_folder import virtual_random_folder
+from random_fs.random_vfile import virtual_random_file_provider
+from random_fs.random_vfolder import virtual_random_folder
 
 class RandomFSProvider(dav_provider.DAVProvider):
     """
