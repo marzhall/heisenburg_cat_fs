@@ -22,6 +22,16 @@ class RandomFSProvider(dav_provider.DAVProvider):
         self.random_folder = None
 
     def get_resource_inst(self, path, environ):
+        """
+        When a user hits the web server on which we're hosted asking for a file,
+        the webserver (in our case, cheroot) then calls this method with the path
+        the user is requesting.
+
+        Here, we've hardcoded results for two paths: "/", which returns a directory
+        object that will list its contents as our virtual `random.txt` file;
+        and "/index.txt", which returns an object that, when read, will return a
+        random number between zero and ten.
+        """
         if self.random_file == None:
             self.random_file = virtual_random_file_provider("/random.txt", environ, display_name="random.txt")
         if self.random_folder == None:
