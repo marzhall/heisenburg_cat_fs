@@ -3,8 +3,7 @@ import logging
 import sys
 
 import wsgidav.wsgidav_app
-from random_fs_provider import RandomFSProvider
-from virtual_random_folder import virtual_random_folder
+from random_fs.random_fs_provider import RandomFSProvider
 from cheroot.wsgi import Server as WSGIServer
 from cheroot.wsgi import PathInfoDispatcher as WSGIPathInfoDispatcher
 
