@@ -1,4 +1,4 @@
-# RandomFS - a webdav virtual filesytem demonstration
+# RandomFS - a webdav virtual filesytem demo
 
 RandomFS serves a webdav server that hosts a single
 file, `random.txt`, which - when opened - contains
