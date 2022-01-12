@@ -3,6 +3,15 @@ import io
 import random
 
 class virtual_random_file_provider(DAVNonCollection):
+    """
+    This class is the equivalent of a file.
+    When a user opens the node either in the web
+    interface or in a mounted driver, they see the
+    contents returned from get_content.
+    
+    In our case, get_content returns a random number
+    between zero and 10.
+    """
 
     def __init__(self, path, environ, display_name=None, display_type=None):
         super().__init__(path, environ)
