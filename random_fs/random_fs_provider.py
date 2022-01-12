@@ -3,6 +3,19 @@ from random_fs.virtual_random_file import virtual_random_file_provider
 from random_fs.virtual_random_folder import virtual_random_folder
 
 class RandomFSProvider(dav_provider.DAVProvider):
+    """
+    This is the top-level "app" of the randomFS server.
+    All requests to the server go through this endpoint,
+    and it's registered to the cheroot web server we're
+    hosting ourselves on at a given path, in our case the
+    `/` directory of the site.
+
+    When the cheroot web server is hit at then endpoint
+    we've registered to, its "get_resource_inst" method is
+    called, along with a path to a resource that the user
+    is requesting, e.g. "/random.txt". The server then
+    returns a wsgidav object for that given path.
+    """ 
     def __init__(self):
         super().__init__()
         self.random_file = None
